@@ -1,0 +1,43 @@
+.icon{
+    fill:$color-black;
+	display:inline-block;
+    width:16px;
+    height:16px;
+    margin:0.5em;
+
+	&.-arrow.-top{ @include svg-direction(top); }
+	&.-arrow.-right{ @include svg-direction(right); }
+	&.-arrow.-bottom{ @include svg-direction(bottom); }
+	&.-arrow.-left{ @include svg-direction(left); }
+}
+
+.background-icon{
+
+	&:before{
+		display:inline-block;
+		content:"";
+	}
+
+	&.-arrow.-top:before{ @include svg-background(arrow, 32px, color-black, top); }
+	&.-arrow.-top.-color-brand-primary:before{ @include svg-background(arrow, 32px, color-brand-primary, top); }
+	&.-arrow.-top.-color-brand-secondary:before{ @include svg-background(arrow, 32px, color-brand-secondary, top); }
+	&.-arrow.-top.-color-grey:before{ @include svg-background(arrow, 32px, color-grey, top); }
+
+	&.-arrow.-right:before{ @include svg-background(arrow, 32px, color-black, right); }
+	&.-arrow.-bottom:before{ @include svg-background(arrow, 32px, color-black, bottom); }
+	&.-arrow.-left:before{ @include svg-background(arrow, 32px, color-black, left); }
+	&.-cross:before{ @include svg-background(cross, 32px, color-black); }
+	&.-download:before{ @include svg-background(download, 32px, color-black); }
+	&.-presentation:before{ @include svg-background(presentation, 32px, color-black); }
+	&.-release:before{ @include svg-background(release, 32px, color-black); }
+	&.-search:before{ @include svg-background(search, 32px, color-black); }
+	&.-sound:before{ @include svg-background(sound, 32px, color-black); }
+	&.-video:before{ @include svg-background(video, 32px, color-black); }
+	&.-close-envelope:before{ @include svg-background(close-envelope, 32px, color-black); }
+	&.-envelope:before{ @include svg-background(envelope, 32px, color-black); }
+	&.-facebook:before{ @include svg-background(facebook, 32px, color-black); }
+	&.-google-plus:before{ @include svg-background(google-plus, 32px, color-black); }
+	&.-linkedin:before{ @include svg-background(linkedin, 32px, color-black); }
+	&.-twitter:before{ @include svg-background(twitter, 32px, color-black); }
+}
+

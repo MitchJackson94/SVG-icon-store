@@ -1,23 +1,28 @@
 {
   "devDependencies": {
     "browser-sync": "2.9.11",
-    "gulp": "^3.8.11",
+    "color": "^0.11.3",
+    "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
     "gulp-exec": "^2.1.2",
+    "gulp-inject": "^4.1.0",
     "gulp-notify": "^2.2.0",
+    "gulp-recolor-svg": "^1.0.3",
     "gulp-sass": "^2.2.0",
-    "gulp-util": "*",
+    "gulp-size": "^2.1.0",
+    "gulp-svg-symbols": "^2.0.0",
+    "gulp-util": "^3.0.7",
     "gulp-watch": "^4.1.1"
-    },
-    "engineStrict": true,
-    "engines": {
-      "node": "~0.12.",
-      "npm": ">=2.7.0"
-      },
-      "dependencies": {
-        "copia-respond-tools": "^0.1.0",
-        "inuit-box-sizing": "^0.2.0",
-        "inuit-normalize": "^3.0.3",
-        "inuit-reset": "^0.1.1"
-      }
-    }
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "~0.12.",
+    "npm": ">=2.7.0"
+  },
+  "dependencies": {
+    "copia-respond-tools": "^0.1.0",
+    "inuit-box-sizing": "^0.2.0",
+    "inuit-normalize": "^3.0.3",
+    "inuit-reset": "^0.1.1"
+  }
+}

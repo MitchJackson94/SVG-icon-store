@@ -1,0 +1,53 @@
+.button{
+	position:relative;
+	display:inline-block;
+	padding:10px 20px;
+	color:$color-white;
+	line-height:1;
+	background-color:$color-green;
+	@include border-radius(30px);
+	@include transition(background-color, $base-transition);
+
+	@include hocus{
+		color:$color-white;
+		background:darken($color-green, 10%);
+	}
+	
+	// Target every icon
+	&.-background-icon{
+		padding-left:50px;
+
+		&:before{
+			position:absolute;
+			left:20px;
+			display:inline-block;
+			content:"";
+			margin:0 1em 0 0;
+			vertical-align:middle;
+		}
+	}
+
+	&.-icon-link{
+
+		// Default button icon styles
+		&:before{
+			@include svg-background(arrow, 12px, color-white, right);
+		}
+	}
+
+	&.-icon-download{
+		
+		// Default button icon styles
+		&:before{
+			@include svg-background(download, 12px, color-white);
+		}
+	}
+
+	&.-icon-search{
+
+		// Default button icon styles
+		&:before{
+			@include svg-background(search, 15px, color-white);
+		}
+	}
+}

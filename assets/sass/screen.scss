@@ -1,5 +1,6 @@
 @import "settings/global";
 @import "settings/colors";
+@import "settings/sprite";
 
 @import "tools/respond";
 @import "tools/mixins";
@@ -24,6 +25,7 @@
 @import "components/page-header";
 @import "components/page-banner";
 @import "components/page-footer";
+@import "components/buttons";
 
 @import "trumps/utilities";
 @import "trumps/widths";

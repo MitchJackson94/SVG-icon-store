@@ -1,0 +1,42 @@
+$background-svg-path: "../sprite/backgrounds/" !default;
+
+// SVG rotate for SVG icons like arrows
+@mixin svg-direction($direction){
+
+    @if ($direction == 'top') {
+        @include rotate(0);
+    }
+
+    @elseif ($direction == 'right') {
+        @include rotate(90);
+    }
+
+    @elseif ($direction == 'bottom') {
+        @include rotate(-180);
+    }
+
+    @elseif ($direction == 'left') {
+        @include rotate(-90);
+    }
+
+    @else {
+        @warn "#{$direction} is not a valid direction."
+    }
+}
+
+
+// Generate SVG background from a mixin check direction to allow for rotate
+@mixin svg-background($icon, $size, $color, $direction: null){
+    display:inline-block;
+    content:"";
+    background:url('#{$background-svg-path}#{$icon}-#{$color}.svg');
+    background-repeat:no-repeat;
+    width:$size;
+    height:$size;
+    background-position:center;
+    background-size:contain;
+
+    @if ($direction){
+        @include svg-direction($direction);
+    }
+}

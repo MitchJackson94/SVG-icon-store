@@ -1,18 +1,50 @@
+// Import GULP packages
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var watch = require('gulp-watch');
 
+// SASS
 var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var cleanCSS = require('gulp-clean-css');
 
+// BrowserSync
 var browserSync = require('browser-sync');
 
+// SVG's
+var Color = require("color");
+var svgSymbols = require('gulp-svg-symbols');
+var RecolorSvg = require("gulp-recolor-svg");
 
+
+
+// Turn all SVG's into symbols
+gulp.task('svg-symbol', function() {
+    return gulp.src('assets/svg/**/*.svg')
+    .pipe(svgSymbols())
+    .pipe(gulp.dest('assets/sprite'));
+})
+
+// Make SVG's the right colour for background images
+gulp.task("svg-recolor", function(){
+    gulp.src('assets/svg/**/*.svg')
+        .pipe(RecolorSvg.GenerateVariants(
+            [ RecolorSvg.ColorMatcher(Color("black")) ],
+            [ { suffix: "-color-white", colors: [ Color("#FFFFFF") ] },
+                { suffix: "-color-black", colors: [ Color("#000000") ] },
+                { suffix: "-color-grey", colors: [ Color("#CCCCCC") ] },
+                { suffix: "-color-brand-primary", colors: [ Color("#00718A") ] },
+                { suffix: "-color-brand-secondary", colors: [ Color("#DA9E26") ] }
+            ]
+        ))
+        .pipe(gulp.dest("assets/sprite/backgrounds"));
+});
+
+// Enable Browser sync on gulp load
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: '_site'
+            baseDir: ''
         },
         host: "localhost"
     });
@@ -20,17 +52,13 @@ gulp.task('browser-sync', function() {
 
 // Sass build
 var sassBuild = function () {
-    gulp.src('sass/**/*.scss').pipe(sass({
+    gulp.src('assets/sass/**/*.scss').pipe(sass({
         errLogToConsole: false
     }))
     .on('error', reportError)
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload( { stream:true } ))
-};
-
-// Compile sass
-gulp.task('sass', sassBuild);
+}; gulp.task('sass', sassBuild); 
 
 // Error report sass
 var reportError = function (error) {
@@ -58,12 +86,17 @@ var reportError = function (error) {
     this.emit('end');
 }
 
+// Watch for files
 gulp.task('watch', function() {
   // Watch .scss files
-  gulp.watch('sass/**/*.scss', ['sass']);
+  gulp.watch('assets/sass/**/*.scss', ['sass']);
+  // Watch for new svg's
+  gulp.watch('assets/svg/*.svg', ['svg-symbol', 'svg-color']);
+  // Watch for new svg's
+  gulp.watch('index.html').on('change', browserSync.reload);
 });
 
 // run 'scripts' task first, then watch for future changes
 gulp.task('default', function () {
-    gulp.start('sass', 'browser-sync', 'watch');
+    gulp.start('sass', 'browser-sync', ['svg-symbol', 'svg-recolor'], 'watch');
 });
