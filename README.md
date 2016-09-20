@@ -1,4 +1,4 @@
-# SVG icon test
+# SVG icon store
 
 ### Usage
 
