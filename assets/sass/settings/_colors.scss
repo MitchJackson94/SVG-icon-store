@@ -4,8 +4,8 @@ $color-grey:                            #CCCCCC;
 $color-grey-light:						#F4F4F4;
 $color-grey-medium:						#4E4E4E;
 $color-grey-dark:                       #1f1f1f;
-$color-brand-primary:                   #00718A;
-$color-brand-secondary:                 #DA9E26;
+$color-brand-primary:                   #000C2E;
+$color-brand-secondary:                 #004480;
 $color-brand-tertiary:                  #222222;
 
 $color-red:                             #D83825;
@@ -13,7 +13,7 @@ $color-green:                           #0DA05A;
 
 // Reassign literal variables to meaningful ones.
 $color-page-text:                       #6F6F6F;
-$color-page-heading:					#373737;
+$color-page-heading:					$color-brand-primary;
 $color-page-background:                 $color-white;
 
 $color-ui:								$color-page-text;

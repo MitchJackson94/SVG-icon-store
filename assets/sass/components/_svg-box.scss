@@ -1,0 +1,10 @@
+.svg-box{
+	padding:30px;
+	background:$color-grey-light;
+	margin-bottom:$base-spacing-unit;
+	@include border-radius(4px);
+
+	svg{
+		width:100%;
+	}
+}

@@ -1,0 +1,14 @@
+.main-menu{
+	display:inline-block;
+	margin:0 auto;
+
+	&__item{
+		display:inline-block;
+		margin:0 10px;
+	}
+
+		&__link{
+			display:block;
+			line-height:$header-height;
+		}
+}

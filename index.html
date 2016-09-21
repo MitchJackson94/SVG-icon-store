@@ -13,61 +13,227 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <script src="/assets/js/svg4everybody.min.js"></script>
     <script src="/assets/js/svg4everybody.legacy.min.js"></script>
-    <title>SVG + Gulp test</title>
+    <title>SVG icon store</title>
     <script>svg4everybody(); // run it now or whenever you are ready</script>
 </head>
 <body>
-    <div class="content">
-        <h1 class="text-center">SVG + Gulp test</h1>
+    <header class="page-header">
+        <ul class="main-menu">
+            <li class="main-menu__item">
+                <a href="http://www.mitchelljackson.co.uk" class="main-menu__link">Personal website</a>
+            </li>
+            <li class="main-menu__item">
+                <a href="https://github.com/MitchJackson94" class="main-menu__link">GitHub</a>
+            </li>
+    </header>
 
-        <div class="text-center">
-            <h2>SVG Symbols</h2>
+    <div class="page-banner">
+        <h1 class="page-banner__title">SVG icon store</h1>
+        <p class="page-banner__sub-title">A set of gulp tasks that converts SVG's into symbols and coloured SVG's for use in background images</p>
+    </div>
 
-            <svg class="icon -arrow -top"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow" /></svg>
-            <svg class="icon -arrow -right"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
-            <svg class="icon -arrow -bottom"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
-            <svg class="icon -arrow -left"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
-            <svg class="icon -cross"><use xlink:href="/assets/sprite/svg-symbols.svg#cross"></use></svg>
-            <svg class="icon -download"><use xlink:href="/assets/sprite/svg-symbols.svg#download"></use></svg>
-            <svg class="icon -presentation"><use xlink:href="/assets/sprite/svg-symbols.svg#presentation"></use></svg>
-            <svg class="icon -release"><use xlink:href="/assets/sprite/svg-symbols.svg#release"></use></svg>
-            <svg class="icon -search"><use xlink:href="/assets/sprite/svg-symbols.svg#search"></use></svg>
-            <svg class="icon -sound"><use xlink:href="/assets/sprite/svg-symbols.svg#sound"></use></svg>
-            <svg class="icon -video"><use xlink:href="/assets/sprite/svg-symbols.svg#video"></use></svg>
-            <svg class="icon -close-envelope"><use xlink:href="/assets/sprite/svg-symbols.svg#close-envelope"></use></svg>
-            <svg class="icon -envelope"><use xlink:href="/assets/sprite/svg-symbols.svg#envelope"></use></svg>
-            <svg class="icon -facebook"><use xlink:href="/assets/sprite/svg-symbols.svg#facebook"></use></svg>
-            <svg class="icon -google-plus"><use xlink:href="/assets/sprite/svg-symbols.svg#google-plus"></use></svg>
-            <svg class="icon -linkedin"><use xlink:href="/assets/sprite/svg-symbols.svg#linkedin"></use></svg>
-            <svg class="icon -twitter"><use xlink:href="/assets/sprite/svg-symbols.svg#twitter"></use></svg>
-            <i class="background-icon -arrow -top"></i>
-            <i class="background-icon -color-brand-primary -arrow -top"></i>
-            <i class="background-icon -color-brand-secondary -arrow -top"></i>
-            <i class="background-icon -color-grey -arrow -top"></i>
+    <div class="content wrapper">
 
-            <i class="background-icon -arrow -right"></i>
-            <i class="background-icon -arrow -bottom"></i>
-            <i class="background-icon -arrow -left"></i>
-            <i class="background-icon -cross"></i>
-            <i class="background-icon -download"></i>
-            <i class="background-icon -presentation"></i>
-            <i class="background-icon -release"></i>
-            <i class="background-icon -search"></i>
-            <i class="background-icon -sound"></i>
-            <i class="background-icon -video"></i>
-            <i class="background-icon -close-envelope"></i>
-            <i class="background-icon -envelope"></i>
-            <i class="background-icon -facebook"></i>
-            <i class="background-icon -google-plus"></i>
-            <i class="background-icon -linkedin"></i>
-            <i class="background-icon -twitter"></i>
+        <div class="row text-center">
+            <h3>SVG Symbols</h3>
+            <div class="grid">
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -arrow -top"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow" /></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -arrow -right"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -arrow -bottom"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -arrow -left"><use xlink:href="/assets/sprite/svg-symbols.svg#arrow"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -cross"><use xlink:href="/assets/sprite/svg-symbols.svg#cross"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -download"><use xlink:href="/assets/sprite/svg-symbols.svg#download"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -presentation"><use xlink:href="/assets/sprite/svg-symbols.svg#presentation"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -release"><use xlink:href="/assets/sprite/svg-symbols.svg#release"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -search"><use xlink:href="/assets/sprite/svg-symbols.svg#search"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -sound"><use xlink:href="/assets/sprite/svg-symbols.svg#sound"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -video"><use xlink:href="/assets/sprite/svg-symbols.svg#video"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -close-envelope"><use xlink:href="/assets/sprite/svg-symbols.svg#close-envelope"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -envelope"><use xlink:href="/assets/sprite/svg-symbols.svg#envelope"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -facebook"><use xlink:href="/assets/sprite/svg-symbols.svg#facebook"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -google-plus"><use xlink:href="/assets/sprite/svg-symbols.svg#google-plus"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -linkedin"><use xlink:href="/assets/sprite/svg-symbols.svg#linkedin"></use></svg>
+                    </div>
+                </div>
+                <div class="grid__item u-1/5">
+                    <div class="svg-box">
+                        <svg class="icon -twitter"><use xlink:href="/assets/sprite/svg-symbols.svg#twitter"></use></svg>
+                    </div>
+                </div>
         </div>
 
-        <a class="button" href="#">Test button</a>
-        <a class="button -background-icon -icon-link" href="#">Link button</a>
-        <a class="button -background-icon -icon-download" href="#">Download button</a>
-        <a class="button -background-icon -icon-search" href="#">Search button</a>
+        <div class="row text-center">
+            <h3>Background SVG's</h3>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -arrow -top"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -color-brand-primary -arrow -top"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -color-brand-secondary -arrow -top"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -color-grey -arrow -top"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -arrow -right"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -arrow -bottom"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -arrow -left"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -cross"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -download"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -presentation"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -release"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -search"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -sound"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -video"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -close-envelope"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -envelope"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -facebook"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -google-plus"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                <div class="svg-box">
+                    <i class="background-icon -linkedin"></i>
+                </div>
+            </div>
+            <div class="grid__item u-1/5">
+                  <div class="svg-box">
+                    <i class="background-icon -twitter"></i>
+                </div>
+            </div>
+        </div>
 
+        <div class="row text-center">
+            <a class="button" href="#">Test button</a>
+            <a class="button -background-icon -icon-link" href="#">Link button</a>
+            <a class="button -background-icon -icon-download" href="#">Download button</a>
+            <a class="button -background-icon -icon-search" href="#">Search button</a>
+        </div>
     </div>
 </body>
 </html>

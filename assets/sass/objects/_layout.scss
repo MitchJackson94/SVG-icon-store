@@ -1,5 +1,6 @@
 .row{
 	padding:75px 0;
+	@include clearfix;
 
 	&.-primary{
 		background-color:$color-brand-secondary;
